@@ -58,3 +58,7 @@ map.hello # "world"
 # NOTE... the below will only work if the key already exists, otherwise, you will get an error:
 map = %{ foo: "baz", hello: "world" }
 %{ map | food: "bar" }
+
+# To create a new key, instead use Map.put/3
+map = ${ hello: "world" }
+Map.put(map, :foo, "bar") # ${ foo: "bar", hello: "world" }
