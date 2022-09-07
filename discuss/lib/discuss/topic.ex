@@ -11,7 +11,7 @@ defmodule Discuss.Topic do
   @doc false
   def changeset(topic, attrs) do
     topic
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:title])
+    |> validate_required([:title])
   end
 end
