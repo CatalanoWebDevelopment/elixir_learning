@@ -3,3 +3,7 @@
     text-transform: capitalize;
     margin: 0 0 0.5rem 0;
 }
+
+.alert-info {
+    margin: 1rem 0;
+}
