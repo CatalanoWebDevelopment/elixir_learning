@@ -32,3 +32,6 @@ discuss-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Ignore secrets
+/config/*.secret.exs
+
