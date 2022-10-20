@@ -53,7 +53,9 @@ import_config "#{config_env()}.exs"
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: { Ueberauth.Strategy.Github, [] }
+    github: {Ueberauth.Strategy.Github, []}
   ]
 
-import_config "#{Mix.env}.secret.exs"
+config :ueberauth, Ueberauth.Strategy.Github.Oauth,
+  client_id: System.get_env("GITHUB_CLIENT_ID"),
+  client_secret: System.get_env("GITHUB_CLIENT_SECRET")
