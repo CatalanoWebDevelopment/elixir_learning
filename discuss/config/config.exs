@@ -56,4 +56,4 @@ config :ueberauth, Ueberauth,
     github: {Ueberauth.Strategy.Github, []}
   ]
 
-import_config "#{Mix.env}.secret.exs"
+import_config "#{Mix.env()}.secret.exs"
